@@ -20,19 +20,19 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'db_idm250_wp' );
+define( 'DB_NAME', 'sylarlic_idm-250' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'sylarlic_idm-250' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '7qRHgjmEcHYx3sy' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_CHARSET', 'utf8' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '{p6nF{vT;RuXP B}[f|c${[t<qMga`?^uzNhjDFrBzF~mi9jg@@#&%$vJKAJGsx_' );
-define( 'SECURE_AUTH_KEY',  '2au9!.i{H|;MjTLFwECi=fN2h>d<8n!/]}wz6;{.-/*/kh6x( +bEf^UY~4fhN+>' );
-define( 'LOGGED_IN_KEY',    '.)TS{<DAt28(|*#?M.|wWNage24B=(nfF3NX&<:wg&82fGe1:B6}V0b,hPLO3CIl' );
-define( 'NONCE_KEY',        ':p{}L6d`13!Fv[M]F+Y.r+$HM&(4PiB&0.*wih7^5c3,6>g.k!&@FUH%|Bvv1900' );
-define( 'AUTH_SALT',        'C&]6sY]C%F*GL2]=qG<n9tDzBRI7O!@`fc9RR^aobu<.~sX))YnEK^IDg;=>?XS{' );
-define( 'SECURE_AUTH_SALT', '-6Yb^Z2X.z-=FZnsGP98>YF#oiBH87:I*hl<,oa%vt)r59gJttfq]#tuZ1rz,l,^' );
-define( 'LOGGED_IN_SALT',   'F2bbBbQB$h~!!Si%#+nNy.E4 A=Ea;z|lU}W(I#s%;%Xvgf/de$>%EmJ(&_t:B(D' );
-define( 'NONCE_SALT',       'Aa-EVj`HW@Q3ODHo`Y|~hm9:`]/f%eFMYZ #C6_ev<sHaAc1sWe`E$Z3Dk#d8cgF' );
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /**#@-*/
 
@@ -79,7 +79,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
