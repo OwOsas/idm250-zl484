@@ -1,5 +1,12 @@
 @import "./header";
 
-body{
-    background-color: black;
+body, html{
+    background-color: rgb(82, 82, 82);
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
 }
+
+

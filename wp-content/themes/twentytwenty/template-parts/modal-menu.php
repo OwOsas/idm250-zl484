@@ -55,7 +55,7 @@
 										'container'      => '',
 										'items_wrap'     => '%3$s',
 										'show_toggles'   => true,
-										'theme_location' => 'expanded',
+										'theme_location' => 'expanded', 
 									)
 								);
 							}

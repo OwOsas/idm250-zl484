@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* 
+font-family: 'Sanchez', serif;
+font-family: 'Spartan', sans-serif; */
+@font-face {
+  font-family: "Stardom-Regular";
+  src: url("../fonts/Stardom/Stardom-Regular.woff2") format("woff2"), url("../fonts/Stardom/Stardom-Regular.woff") format("woff"), url("../fonts/Stardom/Stardom-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+a {
+  font-family: "Sanchez", serif;
+}
+
+#header_container #header {
+  background-color: white;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header_container #header img {
+  height: 1rem;
+}
+#header_container #header #burger_menu {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#header_container #header #burger_menu::before {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 2px;
+  width: 32px;
+  transform: translateY(-4px);
+}
+#header_container #header #burger_menu::after {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 2px;
+  width: 32px;
+  transform: translateY(4px);
+}
+#header_container .menu-primary-menu-container {
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  width: 80%;
+}
+#header_container .menu-primary-menu-container ul {
+  margin: 2rem;
+  padding: 0;
+}
+#header_container .menu-primary-menu-container ul .active a {
+  font-weight: bold;
+}
+#header_container .menu-primary-menu-container ul li {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+#header_container .menu-primary-menu-container ul li a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: black;
+}
+
+body, html {
+  background-color: #525252;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=styles.css.map */

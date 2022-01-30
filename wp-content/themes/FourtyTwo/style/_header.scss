@@ -1,0 +1,79 @@
+@import './fonts';
+@import './theme';
+
+#header_container {
+
+
+    #header {
+        background-color: $secondary_color;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            height: 1rem;
+        }
+
+        #burger_menu {
+            height: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &::before {
+                content: "";
+                display: block;
+
+                background-color: $primary_color;
+
+                height: 2px;
+                width: 32px;
+                transform: translateY(-4px);
+            }
+
+            &::after {
+                content: "";
+                display: block;
+
+                background-color: $primary_color;
+
+                height: 2px;
+                width: 32px;
+                transform: translateY(4px);
+            }
+        }
+    }
+    .menu-primary-menu-container{
+        background-color: $secondary_color;
+    
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        
+        ul{
+            
+            margin: 2rem;
+            padding: 0;
+    
+            .active{
+                a{
+                    font-weight: bold;
+                }
+            }
+    
+            li {
+    
+                list-style: none;
+                margin-bottom: 2rem;
+    
+                a {
+                    font-size: 1.25rem;
+                    text-decoration: none;
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+    
+}
