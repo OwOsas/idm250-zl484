@@ -1,0 +1,126 @@
+body {
+  height: 200vh;
+  /* background-image: url(../img/alisaie.jpg);
+  background-size: contain;
+  background-repeat: no-repeat; */
+}
+
+#landing {
+  height: calc(100vh - 2em);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  background-color: black;
+}
+
+* {
+  transition: 0.3s;
+}
+
+#greeting,
+#interests {
+  height: 100%;
+}
+
+#greeting,
+#web,
+#tech_art {
+  color: white;
+  padding: 0.5em 1em;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px white solid;
+  border-top: 0;
+}
+
+#greeting > *,
+#web > *,
+#tech_art > * {
+  padding: 0.5em 1em;
+  transition: 0.3s;
+}
+
+#greeting {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#interests {
+  width: 100%;
+}
+
+#web {
+  height: 50%;
+  transition: 0.3s;
+  font-family: "Spartan", sans-serif;
+}
+
+#tech_art {
+  height: 50%;
+  font-family: "Spartan", sans-serif;
+}
+
+#greeting::after,
+#greeting::before,
+#web::after,
+#web::before,
+#tech_art::after,
+#tech_art::before {
+  content: "";
+  display: block;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: solid 2px white;
+  border-left: 0;
+  border-right: 0;
+  margin: 1em 0;
+}
+
+#greeting::before,
+#web::before,
+#tech_art::before {
+  left: 1em;
+}
+
+#greeting::after,
+#web::after,
+#tech_art::after {
+  right: 1em;
+}
+
+#landing h1 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 600;
+  font-size: 4em;
+  line-height: 98%;
+  letter-spacing: 0.04em;
+}
+
+#landing h2 {
+  font-family: "Spartan", sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 98%;
+  letter-spacing: 0.1em;
+}
+
+#landing h3 {
+  font-family: "Sanchez", serif;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 840px) {
+  #landing {
+    flex-direction: row;
+  }
+
+  #greeting {
+    width: 40vw;
+  }
+}/*# sourceMappingURL=index.css.map */

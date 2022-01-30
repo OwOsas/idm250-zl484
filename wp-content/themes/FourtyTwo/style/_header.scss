@@ -1,8 +1,19 @@
 @import './fonts';
 @import './theme';
 
-#header_container {
+.mobile{
+    display: block;
+}
 
+.desktop{
+    display: none;
+}
+
+#header_container {
+    width: 100%;
+    // position: sticky;
+
+    z-index: 200;
 
     #header {
         background-color: $secondary_color;
@@ -15,41 +26,72 @@
             height: 1rem;
         }
 
+        .closed{
+            &::before{
+                transform: rotate(45deg) !important;
+            }
+
+            &::after{
+                transform: rotate(-45deg) !important;
+            }
+        }
+
         #burger_menu {
             height: 32px;
             display: flex;
             flex-direction: column;
             justify-content: center;
 
+            position: relative;
+
             &::before {
                 content: "";
                 display: block;
+
+                
 
                 background-color: $primary_color;
 
                 height: 2px;
                 width: 32px;
                 transform: translateY(-4px);
+
+                transition: .3s;
             }
 
             &::after {
                 content: "";
                 display: block;
+                position: absolute;
 
                 background-color: $primary_color;
 
                 height: 2px;
                 width: 32px;
                 transform: translateY(4px);
+
+                transition: .3s;
             }
         }
     }
+
+    .hidden{
+        transform: translate(-100%);
+    }
+
     .menu-primary-menu-container{
+        z-index: 200;
         background-color: $secondary_color;
     
         position: absolute;
         height: 100%;
         width: 80%;
+        @media (max-width: 300px) {
+            width: 100%;
+        }
+        
+
+        transition: .3s;
         
         ul{
             
@@ -58,7 +100,8 @@
     
             .active{
                 a{
-                    font-weight: bold;
+                    background-color: $primary_color;
+                    color: $secondary_color;
                 }
             }
     
@@ -76,4 +119,98 @@
         }
     }
     
+}
+
+
+@media (min-width: $desktop_bp) {
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    #header_container {
+        background-color: $secondary_color;
+        height: calc(100vh - 2em);
+        width: unset;
+
+        position: absolute;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        border: 1px solid $secondary_color;
+        border-inline: 0;
+        box-sizing: border-box;
+
+        #header{
+            margin: 1rem 1.25rem;
+            padding: unset;
+
+            img{
+                image-orientation: 90deg;
+                height: unset;
+                width: 1rem;
+            }
+
+            #burger_menu{
+                display: none;
+            }
+        }
+
+        .hidden{
+            transform: unset;
+        }
+
+        .menu-primary-menu-container{
+            position: relative;
+            width: unset;
+            height: 70%;
+
+
+            ul{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5em;
+
+                li{
+                    list-style: none;
+                    writing-mode: vertical-rl;
+                    text-orientation: mixed;
+
+                    margin: unset;
+                }
+            }
+        }
+
+        .deco{
+            width: 100%;
+            height: 22px;
+            background-color: $primary_color;
+
+            &::before{
+                content: "";
+                display: block;
+                background-color: $secondary_color;
+                height: 2px;
+                width: 100%;
+                margin-top: 3px;
+            }
+            &::after{
+                content: "";
+                display: block;
+                background-color: $secondary_color;
+                height: 2px;
+                width: 100%;
+                margin-top: 3px;
+            }
+        }
+    }
 }
