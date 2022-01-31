@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* 
+font-family: 'Sanchez', serif;
+font-family: 'Spartan', sans-serif; */
+@font-face {
+  font-family: "Stardom-Regular";
+  src: url("../fonts/Stardom/Stardom-Regular.woff2") format("woff2"), url("../fonts/Stardom/Stardom-Regular.woff") format("woff"), url("../fonts/Stardom/Stardom-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+a {
+  font-family: "Sanchez", serif;
+}
+
 body {
   height: 200vh;
   /* background-image: url(../img/alisaie.jpg);
@@ -6,7 +21,7 @@ body {
 }
 
 #landing {
-  height: calc(100vh - 2em);
+  height: calc(100vh - 2rem);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -115,9 +130,10 @@ body {
   font-size: 1.5em;
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 1050px) {
   #landing {
     flex-direction: row;
+    width: calc(100vw - 4.5rem);
   }
 
   #greeting {

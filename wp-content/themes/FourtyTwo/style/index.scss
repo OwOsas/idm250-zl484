@@ -1,3 +1,6 @@
+@import './fonts';
+@import './theme';
+
 body {
     height: 200vh;
 
@@ -7,12 +10,13 @@ body {
 }
 
 #landing {
-    height: calc(100vh - 2em);
+    height: calc(100vh - 2rem);
     width: 100%;
+    
     display: flex;
     flex-direction: column;
     transition: .5s;
-    background-color: black;
+    background-color: $primary_color;
 }
 
 * {
@@ -27,12 +31,12 @@ body {
 #greeting,
 #web,
 #tech_art {
-    color: white;
+    color: $secondary_color;
     padding: .5em 1em;
     position: relative;
 
     box-sizing: border-box;
-    border: 1px white solid;
+    border: 1px $secondary_color solid;
     border-top: 0;
 }
 
@@ -57,12 +61,12 @@ body {
 #web {
     height: 50%;
     transition: .3s;
-    font-family: 'Spartan', sans-serif;
+    font-family: $primary-font;
 }
 
 #tech_art {
     height: 50%;
-    font-family: 'Spartan', sans-serif;
+    font-family: $primary-font;
 }
 
 #greeting::after,
@@ -79,7 +83,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    border: solid 2px white;
+    border: solid 2px $secondary_color;
     border-left: 0;
     border-right: 0;
 
@@ -99,7 +103,7 @@ body {
 }
 
 #landing h1 {
-    font-family: 'Spartan', sans-serif;
+    font-family: $primary-font;
     font-weight: 600;
     font-size: 4em;
     line-height: 98%;
@@ -107,7 +111,7 @@ body {
 }
 
 #landing h2 {
-    font-family: 'Spartan', sans-serif;
+    font-family: $primary-font;
     font-weight: normal;
     font-size: 1.5em;
     line-height: 98%;
@@ -115,18 +119,22 @@ body {
 }
 
 #landing h3 {
-    font-family: 'Sanchez', serif;
+    font-family: $secondary-font;
     font-weight: normal;
 
     font-size: 1.5em;
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: $desktop_bp) {
     #landing {
         flex-direction: row;
+        width: calc(100vw - 4.5rem);
     }
 
     #greeting {
         width: 40vw;
     }
+
+
+
 }

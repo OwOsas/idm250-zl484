@@ -13,6 +13,7 @@ if (version_compare($GLOBALS['wp_version'], '5.4.2', '<')) {
 function include_css()
 {
     wp_enqueue_style('general',get_template_directory_uri() . '/style/styles.css');
+    
     if(is_home()){
         wp_enqueue_style('index',get_template_directory_uri() . '/style/index.css');
     }
