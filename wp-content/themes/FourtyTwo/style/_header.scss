@@ -89,12 +89,10 @@
         @media (max-width: 300px) {
             width: 100%;
         }
-        
 
         transition: .3s;
         
         ul{
-            
             margin: 2rem;
             padding: 0;
     
@@ -109,11 +107,41 @@
     
                 list-style: none;
                 margin-bottom: 2rem;
-    
+                position: relative;
+                padding: .5rem .2rem;
+
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+
+                    height: 0;
+                    width: 100%;
+                    background-color: $secondary_color;
+                    z-index: -1;
+                    transition: .3s;
+
+                    right: 0;
+                    top: 0;
+                }
+
                 a {
                     font-size: 1.25rem;
                     text-decoration: none;
                     color: $primary_color;
+                    margin: .5em;
+                    transition: .3s;
+                }
+
+                &:hover{
+                    &::before{
+                        background-color: $primary_color;
+                        height: 100%;
+                    }
+
+                    a{
+                        color: $secondary_color;
+                    }
                 }
             }
         }
@@ -170,7 +198,7 @@
         .menu-primary-menu-container{
             position: relative;
             width: unset;
-            height: 70%;
+            height: 1fr;
 
 
             ul{

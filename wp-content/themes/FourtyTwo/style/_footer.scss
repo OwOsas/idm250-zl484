@@ -1,5 +1,3 @@
-
-
 .recent_work {
     background-color: $primary_color;
     color: $secondary_color;
@@ -28,9 +26,14 @@
 
 .rw_card {
     min-width: 285px;
-
-
     max-width: 300px;
+    transition: .5s;
+
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.03) translate(0, -5px);
+    }
 }
 
 .rw_description {
@@ -115,21 +118,57 @@
     padding: 1rem 1rem;
     border-bottom: 1px $secondary_color solid;
     transition: .3s;
+    position: relative;
 
     cursor: pointer;
-}
 
+    h3{
+        color: $secondary_color;
+        font-size: 1.5em;
+        font-family: $primary-font;
+        font-weight: 300;
+        margin: unset;
 
-.portfolio_link h3 {
-    color: $secondary_color;
-    font-size: 1.5em;
-    font-family: $primary-font;
-    font-weight: 300;
-    margin: unset;
-}
+        transition: .3s;
 
-.portfolio_link:hover {
-    background-color: rgb(47, 47, 47);
+        z-index: 1;
+    }
+    img {
+        height: 2em;
+        transition: .3s;
+        z-index: 1;
+    }
+
+    &::after{
+        content:"";
+        display: block;
+        position: absolute;
+
+        width: 100%;
+        height: 0%;
+        background-color: $primary_color;
+        left: 0;
+        top: 0;
+        z-index: 0;
+
+        transition: .3s;
+    }
+
+    &:hover{
+        &::after{
+            width: 100%;
+            height: 100%;
+            background-color: $secondary_color;
+        }
+
+        h3{
+            color: $primary_color;
+        }
+
+        img{
+            filter: invert(1);
+        }
+    }
 }
 
 .footer {
@@ -189,15 +228,17 @@
 
     .portfolio_link {
         padding: 2rem 3rem;
+
+        img{
+            height: 6em;
+        }
     }
 
     .portfolio_link h3 {
         font-size: 6rem;
     }
 
-    .portfolio_link img {
-        height: 6em;
-    }
+
 
     .footer {
         flex-direction: row;
