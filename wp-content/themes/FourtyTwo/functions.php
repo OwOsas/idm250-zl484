@@ -1,13 +1,13 @@
 <?php
 
-if (version_compare('7.4', phpversion(), '>')) {
-    die('You must be using PHP 7.4 or greater.');
-}
+// if (version_compare('7.4', phpversion(), '>')) {
+//     die('You must be using PHP 7.4 or greater.');
+// }
 
 // Check WP Version
-if (version_compare($GLOBALS['wp_version'], '5.4.2', '<')) {
-    die('WP theme only works in WordPress 5.4.2 or later. Please upgrade your WP site');
-}
+// if (version_compare($GLOBALS['wp_version'], '5.4.2', '<')) {
+//     die('WP theme only works in WordPress 5.4.2 or later. Please upgrade your WP site');
+// }
 
 //css
 function include_css()
@@ -29,6 +29,9 @@ function include_js_files()
 
     if(is_home()){
         wp_enqueue_script('home', get_template_directory_uri() . '/js/index.js',['header'], '1.0', true);
+    }
+    else{
+        wp_enqueue_script('js', '', ['header'], '1.0', true);
     }
     
 }

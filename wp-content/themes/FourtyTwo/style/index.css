@@ -71,11 +71,13 @@ body {
   height: 50%;
   transition: 0.3s;
   font-family: "Spartan", sans-serif;
+  cursor: pointer;
 }
 
 #tech_art {
   height: 50%;
   font-family: "Spartan", sans-serif;
+  cursor: pointer;
 }
 
 #greeting::after,

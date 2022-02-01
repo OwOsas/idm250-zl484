@@ -62,11 +62,15 @@ body {
     height: 50%;
     transition: .3s;
     font-family: $primary-font;
+
+    cursor: pointer;
 }
 
 #tech_art {
     height: 50%;
     font-family: $primary-font;
+
+    cursor: pointer;
 }
 
 #greeting::after,

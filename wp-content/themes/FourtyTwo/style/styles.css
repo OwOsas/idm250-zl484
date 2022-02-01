@@ -191,6 +191,7 @@ a {
   font-weight: 500;
   font-size: 2em;
   padding: 1rem;
+  margin: unset;
 }
 
 .rw_container {
@@ -218,6 +219,7 @@ a {
 .rw_img {
   height: 320px;
   background-size: cover;
+  background-color: #313131;
 }
 
 .rw_description h2 {
@@ -282,9 +284,10 @@ a {
   justify-content: space-between;
   /* align-content: center; */
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   border-bottom: 1px white solid;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .portfolio_link h3 {
@@ -292,6 +295,7 @@ a {
   font-size: 1.5em;
   font-family: "Spartan", sans-serif;
   font-weight: 300;
+  margin: unset;
 }
 
 .portfolio_link:hover {
@@ -351,7 +355,7 @@ a {
   }
 
   .portfolio_link {
-    padding-inline: 3em;
+    padding: 2rem 3rem;
   }
 
   .portfolio_link h3 {

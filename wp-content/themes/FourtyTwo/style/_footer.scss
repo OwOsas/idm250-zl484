@@ -10,6 +10,7 @@
     font-weight: 500;
     font-size: 2em;
     padding: 1rem;
+    margin: unset;
 }
 
 .rw_container {
@@ -40,6 +41,7 @@
 .rw_img {
     height: 320px;
     background-size: cover;
+    background-color: rgb(49, 49, 49);
 }
 
 .rw_description h2 {
@@ -110,9 +112,11 @@
     justify-content: space-between;
     /* align-content: center; */
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-bottom: 1px $secondary_color solid;
     transition: .3s;
+
+    cursor: pointer;
 }
 
 
@@ -121,6 +125,7 @@
     font-size: 1.5em;
     font-family: $primary-font;
     font-weight: 300;
+    margin: unset;
 }
 
 .portfolio_link:hover {
@@ -183,7 +188,7 @@
     }
 
     .portfolio_link {
-        padding-inline: 3em;
+        padding: 2rem 3rem;
     }
 
     .portfolio_link h3 {
