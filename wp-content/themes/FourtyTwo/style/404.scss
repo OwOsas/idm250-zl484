@@ -1,0 +1,43 @@
+@import './fonts';
+@import './theme';
+@import './show_case';
+
+.not_found{
+    font-family: $secondary_font;
+    height: 100vh;
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    color: $secondary_color;
+
+    .text{
+        text-align: center;
+        font-style: italic;
+        h1{
+            font-size: 9rem;
+            margin: 0rem;
+            line-height: 9rem;
+        }
+        h3{
+            font-size: 1.5rem;
+            letter-spacing: 100%;
+            margin: 0rem;
+        }
+    }
+
+    .btn{
+        background-color: $secondary_color;
+        color: $primary-color;
+        padding: .65rem 3rem;
+        border-radius: 2rem;
+        font-size: 1.5rem;
+
+        text-decoration: none;
+        font-style: italic;
+    }
+}

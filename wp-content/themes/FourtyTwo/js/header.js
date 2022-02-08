@@ -10,3 +10,15 @@ burger.addEventListener("click",function(){
 },false);
 
 console.log('This is header js');
+
+window.addEventListener('load', function() {
+    var document_height = document.body.clientHeight;
+    console.log(document_height);
+    document.getElementById("header_sticky_container").style.height = document_height + "px";
+  });
+
+  window.addEventListener('resize', function() {
+    var document_height = document.body.clientHeight;
+    console.log(document_height);
+    document.getElementById("header_sticky_container").style.height = document_height + "px";
+  });

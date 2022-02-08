@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* 
+font-family: 'Sanchez', serif;
+font-family: 'Spartan', sans-serif; */
+@font-face {
+  font-family: "Stardom-Regular";
+  src: url("../fonts/Stardom/Stardom-Regular.woff2") format("woff2"), url("../fonts/Stardom/Stardom-Regular.woff") format("woff"), url("../fonts/Stardom/Stardom-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+a {
+  font-family: "Sanchez", serif;
+}
+
+.showcase {
+  position: relative;
+  width: 100vw;
+  padding: 3em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg_text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em 0.5em;
+}
+
+.bg_text span {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5vh;
+  left: 5vw;
+  width: 100vw;
+  line-height: 80%;
+  font-family: "Stardom-Regular";
+  font-size: 28vw;
+  color: rgba(0, 0, 0, 0.05);
+}
+@media (min-width: 1050px) {
+  .bg_text span {
+    font-size: 10rem;
+  }
+}
+
+.sc_card {
+  margin-top: 4em;
+  width: 100%;
+  max-width: 980px;
+  position: relative;
+  padding: 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 1s;
+}
+.sc_card:hover {
+  transform: scale(1.02) translateY(-10px);
+  transition: 0.5s;
+}
+
+.sc_card img {
+  height: 200px;
+  max-height: 65vh;
+  width: 300px;
+  max-width: 100%;
+  /* background-color: white; */
+}
+@media (min-width: 1050px) {
+  .sc_card img {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.sc_card_description {
+  width: 100%;
+  margin-top: 1.25em;
+}
+
+.sc_card_description h2 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+}
+
+.sc_card_description h4,
+.sc_card_description h3 {
+  font-family: "Sanchez", serif;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 840px) {
+  .sc_card img {
+    max-width: 820px;
+  }
+}
+#thumbnail {
+  width: calc(100%);
+  padding: 5vw;
+  padding-bottom: 3rem;
+  color: white;
+  background-color: black;
+}
+@media (min-width: 1050px) {
+  #thumbnail {
+    width: calc(100% - 3.5rem);
+  }
+}
+#thumbnail #thumbnail_img {
+  width: 100%;
+  height: 95vw;
+  max-height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1050px) {
+  #thumbnail #thumbnail_img {
+    height: 50vh;
+    background-position: left;
+    margin-bottom: 3rem;
+  }
+}
+#thumbnail h1 {
+  font-family: "Spartan", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+#thumbnail #tag_year {
+  display: flex;
+  justify-content: space-between;
+}
+#thumbnail #tag_year h3 {
+  font-family: "Sanchez", serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  margin: 0;
+}
+#thumbnail #tag_year h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  width: 100vw;
+  max-width: 1200px;
+  padding: 1rem;
+}
+@media (min-width: 1050px) {
+  .content {
+    padding: 0 3.5rem 0 1.5rem;
+    margin: 5rem auto;
+    width: calc(100% - 3.5rem);
+  }
+}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+}
+.content h1 {
+  font-size: 2.75rem;
+}
+.content h2 {
+  font-size: 2.15rem;
+}
+.content h3 {
+  font-size: 1.75rem;
+}
+.content h4 {
+  font-size: 1.25rem;
+}
+.content h5 {
+  font-size: 1.1rem;
+}
+.content h6 {
+  font-size: 1rem;
+}
+.content ul, .content ol {
+  font-family: "Sanchez", serif;
+  font-size: 1.25rem;
+}
+.content .wp-block-table {
+  font-family: "Sanchez", serif;
+  font-size: 1.25rem;
+}
+.content .wp-block-table tbody {
+  border: 1px black solid;
+}
+.content .wp-block-table tbody tr {
+  text-align: center;
+}
+.content .wp-block-table tbody tr:first-child {
+  color: white;
+  background-color: black;
+}
+.content .wp-block-table tbody tr:first-child td:first-child {
+  background-color: #555555;
+}
+.content .wp-block-table tbody tr td {
+  border: 1px black solid;
+}
+.content .wp-block-table tbody tr td:first-child {
+  color: white;
+  background-color: black;
+  width: 15%;
+}
+.content .wp-block-table figcaption {
+  font-size: 0.95rem;
+  text-align: center;
+  font-style: italic;
+}
+.content .wp-block-button {
+  font-family: "Sanchez", serif;
+  margin: 0.5rem 1rem;
+}
+.content .wp-block-button a {
+  background-color: #1f1f1f;
+  transition: 0.3s;
+}
+.content .wp-block-button:hover a {
+  background-color: #555555;
+}
+.content p {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.15rem;
+  line-height: 150%;
+}
+.content p::first-letter {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.content p a {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+.content .wp-block-pullquote {
+  border: 2px black solid;
+  border-inline: 0;
+  margin: 2rem 5vw;
+  padding: 1rem 1rem;
+}
+.content .wp-block-pullquote blockquote {
+  margin: 0;
+}
+.content .wp-block-pullquote blockquote p {
+  font-family: "Sanchez", serif;
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+.content .wp-block-pullquote blockquote cite {
+  font-family: "Sanchez", serif;
+  font-size: 0.95rem;
+  text-align: center;
+  font-style: italic;
+}
+.content .wp-block-quote {
+  border-left: 3px black solid;
+  margin: 2rem 5vw;
+  padding: 0 1rem 0 2rem;
+}
+.content .wp-block-quote p {
+  font-family: "Sanchez", serif;
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+.content .wp-block-quote cite {
+  font-family: "Sanchez", serif;
+  font-size: 0.95rem;
+  text-align: center;
+  font-style: italic;
+}
+.content .wp-block-image.size-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.content .wp-block-image.size-full img {
+  max-height: 350px;
+}
+.content .wp-block-image.size-full figcaption {
+  font-family: "Sanchez", serif;
+  font-size: 0.95rem;
+  text-align: center;
+  font-style: italic;
+}
+.content .wp-block-media-text {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1050px) {
+  .content .wp-block-media-text {
+    display: grid;
+  }
+}
+.content .wp-block-media-text .wp-block-media-text__media img {
+  max-height: 350px;
+}
+.content .wp-block-media-text .wp-block-media-text__content {
+  font-size: 1.25rem;
+}/*# sourceMappingURL=single.css.map */
