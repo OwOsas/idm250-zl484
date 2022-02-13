@@ -142,7 +142,7 @@ a {
   color: white;
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   .mobile {
     display: none;
   }

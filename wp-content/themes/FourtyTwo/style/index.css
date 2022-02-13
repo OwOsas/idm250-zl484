@@ -41,10 +41,15 @@ a {
   font-size: 28vw;
   color: rgba(0, 0, 0, 0.05);
 }
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   .bg_text span {
     font-size: 10rem;
   }
+}
+
+.sc_container {
+  min-width: 80%;
+  margin: 0 auto;
 }
 
 .sc_card {
@@ -66,17 +71,9 @@ a {
 }
 
 .sc_card img {
-  height: 200px;
-  max-height: 65vh;
-  width: 300px;
+  width: 100%;
   max-width: 100%;
   /* background-color: white; */
-}
-@media (min-width: 1050px) {
-  .sc_card img {
-    width: 100%;
-    height: 400px;
-  }
 }
 
 .sc_card_description {
@@ -218,7 +215,7 @@ body {
   font-size: 1.5em;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 950px) {
   #landing {
     flex-direction: row;
     width: calc(100vw - 4.5rem);

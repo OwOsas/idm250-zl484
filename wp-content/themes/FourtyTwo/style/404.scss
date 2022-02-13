@@ -39,5 +39,12 @@
 
         text-decoration: none;
         font-style: italic;
+
+        transition: .3s;
+
+        &:hover{
+            background-color: $hight_light_color;
+            color: $secondary_color;
+        }
     }
 }

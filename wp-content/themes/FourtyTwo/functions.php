@@ -1,17 +1,5 @@
 <?php
-
-// if (version_compare('7.4', phpversion(), '>')) {
-//     die('You must be using PHP 7.4 or greater.');
-// }
-
-// Check WP Version
-// if (version_compare($GLOBALS['wp_version'], '5.4.2', '<')) {
-//     die('WP theme only works in WordPress 5.4.2 or later. Please upgrade your WP site');
-// }
-
-
-
-
+// Theme setup
 add_action( 'after_setup_theme', function(){
     add_theme_support('title_tag');
     add_theme_support( 'custom-logo');
@@ -35,6 +23,10 @@ function include_css()
 
     if(is_404()){
         wp_enqueue_style('404',get_template_directory_uri() . '/style/404.css');
+    }
+
+    if(is_page()){
+        wp_enqueue_style('temp-portfolio',get_template_directory_uri() . '/style/template-portfolio.css');
     }
 }
 
@@ -67,3 +59,8 @@ function register_theme_navigation()
 add_action('after_setup_theme', 'register_theme_navigation');
 
 
+// Custom Post Type
+function fortyTwo_register_custom_post_type(){
+    $args = [];
+    register_post_type( 'fortyTwo_portfolio', $args);
+}

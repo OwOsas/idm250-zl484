@@ -8,12 +8,12 @@
     if(is_front_page()){
         echo "Sylar Li";
     }
-    else{wp_title();}
+    else{wp_title("");}
     echo " | Interactive Designer"
     ?></title>
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class();?>>
     <div id="header_sticky_container">
     <div id="header_container">
         <div id="header">

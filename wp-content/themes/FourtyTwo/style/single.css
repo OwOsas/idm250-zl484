@@ -41,10 +41,15 @@ a {
   font-size: 28vw;
   color: rgba(0, 0, 0, 0.05);
 }
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   .bg_text span {
     font-size: 10rem;
   }
+}
+
+.sc_container {
+  min-width: 80%;
+  margin: 0 auto;
 }
 
 .sc_card {
@@ -66,17 +71,9 @@ a {
 }
 
 .sc_card img {
-  height: 200px;
-  max-height: 65vh;
-  width: 300px;
+  width: 100%;
   max-width: 100%;
   /* background-color: white; */
-}
-@media (min-width: 1050px) {
-  .sc_card img {
-    width: 100%;
-    height: 400px;
-  }
 }
 
 .sc_card_description {
@@ -107,7 +104,7 @@ a {
   color: white;
   background-color: black;
 }
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   #thumbnail {
     width: calc(100% - 3.5rem);
   }
@@ -121,7 +118,7 @@ a {
   background-repeat: no-repeat;
   margin-bottom: 1rem;
 }
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   #thumbnail #thumbnail_img {
     height: 50vh;
     background-position: left;
@@ -154,7 +151,7 @@ a {
   max-width: 1200px;
   padding: 1rem;
 }
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   .content {
     padding: 0 3.5rem 0 1.5rem;
     margin: 5rem auto;
@@ -297,7 +294,7 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 1050px) {
+@media (min-width: 950px) {
   .content .wp-block-media-text {
     display: grid;
   }
