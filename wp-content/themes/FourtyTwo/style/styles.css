@@ -269,20 +269,26 @@ a {
 
 .rw_img {
   height: 320px;
-  background-size: cover;
+  background-size: contain;
   background-color: #313131;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.rw_description h2 {
+.rw_description h2, .rw_description h2 a {
   font-family: "Spartan", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
 }
 
 .rw_description h4,
-.rw_description h3 {
+.rw_description h3, .rw_description h4 a {
   font-family: "Sanchez", serif;
   font-weight: normal;
+  color: white;
+  text-decoration: none;
 }
 
 /* .rw_container::-webkit-scrollbar {

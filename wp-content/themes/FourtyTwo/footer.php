@@ -1,15 +1,10 @@
 <div class="recent_work">
     <h2>RECENT WORK</h2>
-    <div class="rw_container">
-        <div class="rw_card">
-            <div class="rw_img" style="background-image: url('../img/alisaie.jpg');"></div>
-            <div class="rw_description" >
-                <h2>Place Holder Card</h2>
-                <h4>Class Project</h4>
-                <h3>2021</h3>
-            </div>
-        </div>
-    </div>
+    <?php 
+    get_template_part(
+        'components/footer_components/footer-showcase-card'
+    );
+    ?>
 </div>
 
 <a class="portfolio_link">

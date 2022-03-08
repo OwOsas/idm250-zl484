@@ -43,20 +43,26 @@
 
 .rw_img {
     height: 320px;
-    background-size: cover;
+    background-size: contain;
     background-color: rgb(49, 49, 49);
+    background-position: center;
+    background-repeat:  no-repeat;
 }
 
-.rw_description h2 {
+.rw_description h2, .rw_description h2 a{
     font-family: $primary-font;
     font-weight: 400;
     font-size: 1.5rem;
+    text-decoration: none;
+    color:  white;
 }
 
 .rw_description h4,
-.rw_description h3 {
+.rw_description h3, .rw_description h4 a {
     font-family: $secondary-font;
     font-weight: normal;
+    color:  $secondary_color;
+    text-decoration: none;
 }
 
 

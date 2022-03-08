@@ -76,15 +76,19 @@
     margin-top: 1.25em;
 }
 
-.sc_card_description h2{
+.sc_card_description h2 a{
     font-family: 'Spartan', sans-serif;
     font-weight: 500;
+    text-decoration:  none;
+    color: $primary-color;
 }
 
 .sc_card_description h4,
-.sc_card_description h3{
+.sc_card_description h3, .sc_card_description h4 a{
     font-family: 'Sanchez', serif;
     font-weight: normal;
+    text-decoration:  none;
+    color: $primary-color;
 }
 
 @media screen and (min-width: 840px){

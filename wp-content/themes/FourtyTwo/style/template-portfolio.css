@@ -81,15 +81,19 @@ a {
   margin-top: 1.25em;
 }
 
-.sc_card_description h2 {
+.sc_card_description h2 a {
   font-family: "Spartan", sans-serif;
   font-weight: 500;
+  text-decoration: none;
+  color: black;
 }
 
 .sc_card_description h4,
-.sc_card_description h3 {
+.sc_card_description h3, .sc_card_description h4 a {
   font-family: "Sanchez", serif;
   font-weight: normal;
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (min-width: 840px) {
@@ -168,13 +172,23 @@ body {
   height: 50vw;
   max-height: 30vh;
   width: 100%;
-  background-color: grey;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
 }
-.card_container .card h3 {
+.card_container .card h3, .card_container .card h3 a {
   font-size: 1.5rem;
   font-family: "Spartan", sans-serif;
   font-weight: 500;
   margin: 0;
+  text-decoration: none;
+  color: black;
+}
+.card_container .card a {
+  text-decoration: none;
+  color: black;
 }
 .card_container .card .card_info {
   display: flex;
