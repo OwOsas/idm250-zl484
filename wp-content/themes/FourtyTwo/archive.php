@@ -45,7 +45,7 @@ get_header();
             ?>
 
             <div class="card">
-                <a href="<?php the_permalink(); ?>" class="card_img" style="background-image: url('<?php echo $featured_image['src']; ?>');"></a>
+                <div class="card_img" style="background-image: url('<?php echo $featured_image['src']; ?>');"></div>
                 <h3 class="card_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
                 <div class="card_info">

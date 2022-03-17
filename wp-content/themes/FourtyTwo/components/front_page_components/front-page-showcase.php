@@ -14,7 +14,7 @@ $project_query = new WP_Query($arg);
 
 
 <div class="showcase">
-    <div class="bg_text"><span>Web Dev / Design</span></div>
+    <div class="bg_text"><span><?php get_post_type($project_query); ?></span></div>
     <div class="sc_container">
     <?php
     while ($project_query->have_posts()) : $project_query->the_post(); ?>
@@ -28,8 +28,11 @@ $project_query = new WP_Query($arg);
     };
     ?>
         <div class="sc_card">
-            <img src="<?php echo $featured_image['src']; ?>"
-                 alt="<?php echo $featured_image['alt']; ?>">
+            <a href="<?php the_permalink(); ?>">            
+                <img src="<?php echo $featured_image['src']; ?>"
+                     alt="<?php echo $featured_image['alt']; ?>">
+            </a>
+
             <div class="sc_card_description">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h2>
                 <h4>

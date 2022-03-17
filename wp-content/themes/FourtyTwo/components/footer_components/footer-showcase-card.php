@@ -27,7 +27,7 @@ $project_query = new WP_Query($arg);
         ?>
 
         <div class="rw_card">
-            <div class="rw_img" style="background-image: url('<?php echo $featured_image['src']; ?>');"></div>
+            <a href="<?php the_permalink(); ?>" class="rw_img" style="background-image: url('<?php echo $featured_image['src']; ?>');"></a>
             <div class="rw_description">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <h4>

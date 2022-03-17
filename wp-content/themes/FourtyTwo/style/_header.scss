@@ -1,15 +1,15 @@
 @import './fonts';
 @import './theme';
 
-.mobile{
+.mobile {
     display: block;
 }
 
-.desktop{
+.desktop {
     display: none;
 }
 
-#header_sticky_container{
+#header_sticky_container {
     position: absolute;
     width: 100%;
     user-select: none;
@@ -18,8 +18,8 @@
 }
 
 #header_container {
-    user-select:all;
-    pointer-events:all;
+    user-select: all;
+    pointer-events: all;
     width: 100%;
     position: sticky;
     top: 0;
@@ -33,16 +33,22 @@
         align-items: center;
         justify-content: space-between;
 
-        img {
-            height: 1rem;
+        #site_logo {
+            height: 1.25rem;
+
+
+            a img {
+                height: 100%;
+                width: auto;
+            }
         }
 
-        .closed{
-            &::before{
+        .closed {
+            &::before {
                 transform: rotate(45deg) !important;
             }
 
-            &::after{
+            &::after {
                 transform: rotate(-45deg) !important;
             }
         }
@@ -59,7 +65,7 @@
                 content: "";
                 display: block;
 
-                
+
 
                 background-color: $primary_color;
 
@@ -86,42 +92,43 @@
         }
     }
 
-    .hidden{
+    .hidden {
         transform: translate(-100%);
     }
 
-    .menu-primary-menu-container{
+    .menu-primary-menu-container {
         z-index: 200;
         background-color: $secondary_color;
-    
+
         position: absolute;
         height: 100vh;
         width: 80%;
+
         @media (max-width: 300px) {
             width: 100%;
         }
 
         transition: .3s;
-        
-        ul{
+
+        ul {
             margin: 2rem;
             padding: 0;
-    
-            .active{
-                a{
+
+            .active {
+                a {
                     background-color: $primary_color;
                     color: $secondary_color;
                 }
             }
-    
+
             li {
-    
+
                 list-style: none;
                 margin-bottom: 2rem;
                 position: relative;
                 padding: .5rem .2rem;
 
-                &::before{
+                &::before {
                     content: "";
                     display: block;
                     position: absolute;
@@ -144,33 +151,33 @@
                     transition: .3s;
                 }
 
-                &:hover{
-                    &::before{
+                &:hover {
+                    &::before {
                         background-color: $primary_color;
                         height: 100%;
                     }
 
-                    a{
+                    a {
                         color: $secondary_color;
                     }
                 }
             }
         }
     }
-    
+
 }
 
 
 @media (min-width: $desktop_bp) {
-    .mobile{
+    .mobile {
         display: none;
     }
 
-    .desktop{
+    .desktop {
         display: block;
     }
 
-    #header_sticky_container{
+    #header_sticky_container {
         position: absolute;
         max-width: 3.5rem;
         right: 0;
@@ -192,39 +199,40 @@
         border-inline: 0;
         box-sizing: border-box;
 
-        #header{
-            margin: 1rem 1.25rem;
+        #header {
+            margin: 1rem 3rem;
             padding: unset;
 
-            img{
+            #site_logo {
                 image-orientation: 90deg;
+                transform: rotate(90deg);
                 height: unset;
-                width: 1rem;
+                width: 2rem;
             }
 
-            #burger_menu{
+            #burger_menu {
                 display: none;
             }
         }
 
-        .hidden{
+        .hidden {
             transform: unset;
         }
 
-        .menu-primary-menu-container{
+        .menu-primary-menu-container {
             position: relative;
             width: unset;
             height: 80%;
 
 
-            ul{
+            ul {
                 padding: 0;
                 margin: 0;
                 display: flex;
                 flex-direction: column;
                 gap: 1.5em;
 
-                li{
+                li {
                     list-style: none;
                     writing-mode: vertical-rl;
                     text-orientation: mixed;
@@ -234,12 +242,12 @@
             }
         }
 
-        .deco{
+        .deco {
             width: 100%;
             height: 22px;
             background-color: $primary_color;
 
-            &::before{
+            &::before {
                 content: "";
                 display: block;
                 background-color: $secondary_color;
@@ -247,7 +255,8 @@
                 width: 100%;
                 margin-top: 3px;
             }
-            &::after{
+
+            &::after {
                 content: "";
                 display: block;
                 background-color: $secondary_color;

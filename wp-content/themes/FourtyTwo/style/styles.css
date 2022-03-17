@@ -50,8 +50,12 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-#header_container #header img {
-  height: 1rem;
+#header_container #header #site_logo {
+  height: 1.25rem;
+}
+#header_container #header #site_logo a img {
+  height: 100%;
+  width: auto;
 }
 #header_container #header .closed::before {
   transform: rotate(45deg) !important;
@@ -171,13 +175,14 @@ a {
     box-sizing: border-box;
   }
   #header_container #header {
-    margin: 1rem 1.25rem;
+    margin: 1rem 3rem;
     padding: unset;
   }
-  #header_container #header img {
+  #header_container #header #site_logo {
     image-orientation: 90deg;
+    transform: rotate(90deg);
     height: unset;
-    width: 1rem;
+    width: 2rem;
   }
   #header_container #header #burger_menu {
     display: none;
@@ -273,6 +278,7 @@ a {
   background-color: #313131;
   background-position: center;
   background-repeat: no-repeat;
+  display: block;
 }
 
 .rw_description h2, .rw_description h2 a {
