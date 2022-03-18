@@ -28,8 +28,9 @@ function include_css()
     if(is_page() || is_category()){
         wp_enqueue_style('temp-portfolio',get_template_directory_uri() . '/style/template-portfolio.css');
     }
-
-
+    if(is_search()){
+        wp_enqueue_style('search',get_template_directory_uri() . '/style/search.css');
+    }
 }
 
 add_action('wp_enqueue_scripts', 'include_css');

@@ -232,6 +232,44 @@ a {
     margin-top: 3px;
   }
 }
+.searchform {
+  width: 80%;
+  padding: 1rem 0;
+  margin-inline: auto;
+}
+@media (max-width: 950px) {
+  .searchform {
+    width: 100%;
+  }
+}
+.searchform div {
+  width: 100%;
+  background-color: white;
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  margin: 0;
+}
+.searchform div input {
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  width: unset;
+}
+@media (max-width: 950px) {
+  .searchform div input {
+    padding: 0.75rem 1rem;
+  }
+}
+.searchform div #s {
+  width: 100%;
+}
+.searchform div #searchsubmit {
+  width: 100%;
+  cursor: pointer;
+}
+
 .recent_work {
   background-color: black;
   color: white;

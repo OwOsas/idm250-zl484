@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<div id="landing">
+<!-- <div id="landing">
         <div id="greeting">
             <div>
                 <h1>Hello <br>there,</h1>
@@ -24,6 +24,6 @@ get_header();
         <div id="continue">
 
         </div>
-    </div>
+    </div> -->
 <?php
 get_footer();

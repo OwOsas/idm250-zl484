@@ -267,3 +267,41 @@
         }
     }
 }
+
+.searchform{
+    width: 80%;
+    padding: 1rem 0;
+    @media (max-width: $desktop_bp) {
+        width:100%
+    }
+
+
+    margin-inline: auto;
+    div{
+        width: 100%;
+        background-color: $secondary_color;
+        border-radius: 3rem;
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+        margin: 0;
+
+        input{
+            font-size: 1.25rem;
+            padding: 1rem 1.5rem;
+            border-radius: 3rem;
+            border: none;
+            width: unset;
+            @media (max-width: $desktop_bp) {
+                padding: .75rem 1rem;
+            }
+        }
+        #s{
+            width: 100%;
+        }
+        #searchsubmit{
+            width: 100%;
+            cursor: pointer;
+        }
+
+    }
+}

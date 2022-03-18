@@ -1,39 +1,69 @@
 <?php
+/* Template Name: Archive */
+?>
 
+<?php
 get_header();
+?>
 
-if ( have_posts() ) :
-	?>
-	<h2>Archive Page</h2>
-	<?php
-	while ( have_posts() ) : the_post(); ?>
-		
-		<article class="post">
-			<h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-			<p class="post-meta"><?php the_time( 'F jS, Y' ); ?> | <a
-					href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a>
-				| <?php
-				$categories = get_the_category();
-				$comma      = ', ';
-				$output     = '';
-				
-				if ( $categories ) {
-					foreach ( $categories as $category ) {
-						$output .= '<a href="' . get_category_link( $category->term_id ) . '">' . $category->cat_name . '</a>' . $comma;
-					}
-					echo trim( $output, $comma );
-				} ?>
-			</p>
-			<?php the_content() ?>
-		</article>
-	
-	<?php endwhile;
 
-else :
-	echo '<p>There are no posts!</p>';
+<h1 class="title">
+    <?php echo strtoupper(wp_title("", false)); ?>
 
-endif;
+    <?php 
+    $postType = 'post';
+    get_template_part('components/search-form');?>
+</h1>
 
+
+
+
+
+<div class="category_container">
+    <h2>PAST WORKS</h2>
+    <!-- Category Container -->
+    <div class="card_container">
+
+        <!-- CARD -->
+        <?php
+        // https://developer.wordpress.org/reference/classes/wp_query/
+
+        $arg = [
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 10,
+            'order' => 'DESC',
+
+        ];
+        $project_query = new WP_Query($arg);
+
+        ?>
+
+
+        <?php
+        while ($project_query->have_posts()) : $project_query->the_post(); ?>
+            <?php
+            // Has to be done in the loop so we have access to the featured image ID
+            $featured_image = idm_get_asset_by_id(get_post_thumbnail_id());
+
+            if (!$featured_image) {
+                $featured_image['alt'] = 'Missing Image';
+                $featured_image['src'] = '//via.placeholder.com/600x450';
+            };
+            ?>
+
+            <?php
+            get_template_part('components/gallery_card');
+            ?>
+
+        <?php
+        endwhile;
+        // After looping through a separate query, this function restores the $post global to the current post in the main query.
+        wp_reset_postdata();
+        ?>
+    </div>
+</div>
+
+<?php
 get_footer();
-
 ?>
