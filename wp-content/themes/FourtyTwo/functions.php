@@ -17,7 +17,7 @@ function include_css()
     if(is_front_page()){
         wp_enqueue_style('index',get_template_directory_uri() . '/style/index.css');
     }
-    if(is_single()){
+    if(is_single() || is_tag()){
         wp_enqueue_style('single',get_template_directory_uri() . '/style/single.css');
     }
 
@@ -25,9 +25,11 @@ function include_css()
         wp_enqueue_style('404',get_template_directory_uri() . '/style/404.css');
     }
 
-    if(is_page()){
+    if(is_page() || is_category()){
         wp_enqueue_style('temp-portfolio',get_template_directory_uri() . '/style/template-portfolio.css');
     }
+
+
 }
 
 add_action('wp_enqueue_scripts', 'include_css');
